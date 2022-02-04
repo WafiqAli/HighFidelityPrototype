@@ -1,0 +1,237 @@
+/**************************** 
+
+Name: Wafiq Ali 
+Context: COMPSCI 345 Assignment 2, 2021
+My Hex Colour is #231A24
+
+****************************/
+
+/* Custom Colour that was assignmed to me */
+.custom-color {
+    color: #231A24;
+}
+.custom-background-color {
+    background-color: #231A24;  
+}
+
+/* setting up focus elements for keyboard only accessibility. Need to ensure outline colour of focus elements are clearly visible */
+*:focus {
+    outline: 3px solid var(--focus-color-1);
+    outline-offset: -3px;
+}
+
+.rego-container > div > input:focus {
+    outline: 3px solid var(--focus-color-2);
+}
+
+.rego-container > button:focus {
+    outline: 3px solid var(--focus-color-2);
+}
+
+/* Setting variables to different shades of custom colour for a monochromatic design */
+:root {
+    --accent-color: #88478a;
+    --accent-color-2: #45144ac7;
+    --focus-color-1: #f7efb0;
+    --focus-color-2: #ff0000;
+}
+
+/* general css for all of html code */
+body, html {
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+#myLogo > img {
+    width: 250px;
+    margin-top: 3.5rem;
+    margin-left: 1rem;
+    
+}
+
+/*Large background image */
+.bgimg {
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bgimg::before {
+    background-position: center;
+    background-size: cover;
+    content: "";
+    background-image: url("libraryBackground1.jpg");
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+}
+
+/* The Idea Section */
+#theIdea {
+    color: white;
+    font-size: 20px;
+}
+
+/* CSS for "Read More..." used in multiple areas */
+.read-more-text {
+    text-shadow: 2px 3px black;
+    text-decoration: none;
+}
+
+.read-more-text:hover {
+    color: var(--accent-color);
+    text-shadow: 0px 0px;
+    cursor: pointer;
+}
+
+/*CSS for the triple card section. Used flex-container and cards */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex-container > div {
+    margin: 10px;
+    width: 32rem;
+    height: 32rem;
+    font-size: 20px;
+    box-shadow: 8px 8px 0px var(--accent-color-2);
+}
+
+.card {
+    width: 100%;
+    color: white;
+    
+}
+.card-title {
+    font-size: 40px;
+    text-align: center;
+}
+.card-subtitle {
+    margin-left: 1rem;
+    font-size: 24px;
+}
+.card-text {
+    margin-left: 1rem;
+    font-size: 20px;
+}
+
+.latestNewsBookCover {
+    width: 10rem;
+    transform: rotate(-20deg);
+    margin-top: 2rem;
+    margin-left: 11.5rem;
+}
+
+.right-arrow {
+    font-size: 60px;
+    color: white;
+    margin-top: -3.75rem; 
+    margin-left: 26rem;
+    
+}
+.right-arrow:hover {
+    cursor: pointer;
+    color: #88478a;
+}
+
+
+
+/* Registration Form Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    box-shadow: 8px 8px 0px var(--accent-color);
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button for Registration Form */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--accent-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* CSS for elements inside Registration Form Modal */
+#bookclubrego {
+    color: white;
+}
+.rego-container > h1 {
+    font-size: 60px;
+}
+.rego-container > div > input {
+    width: 100%;
+    font-size: 16px;
+}
+.rego-container > div > label {
+    font-size: 16px;
+    font-weight: lighter;
+}
+.rego-subheader > h3 {
+    font-size: 30px;
+}
+.rego-button {
+    width: 25%;
+    float: right;
+    font-weight: bold;
+}
+.rego-button:hover {
+    cursor: pointer;
+    color: white;
+    font-weight: normal;
+    background-color: var(--accent-color);
+}
+
+
+
+
+/* Footer Section */
+.footer-icons > a > i {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    cursor: pointer;
+}
+.footer-icons > a > i:hover {
+    color: var(--accent-color);
+}
+.myFooter {
+    text-align: center;
+    padding: 1px;
+    margin-top: 8rem;
+    color: white;
+}
